@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSEvolution", "MSEvolution\MSEvolution.csproj", "{BB09646D-BF7F-46D9-959A-62912BB47C87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSField", "MSField\MSField.csproj", "{70594F0C-AE1E-4CA3-9650-255899C80DF3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{BB09646D-BF7F-46D9-959A-62912BB47C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB09646D-BF7F-46D9-959A-62912BB47C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB09646D-BF7F-46D9-959A-62912BB47C87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70594F0C-AE1E-4CA3-9650-255899C80DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70594F0C-AE1E-4CA3-9650-255899C80DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70594F0C-AE1E-4CA3-9650-255899C80DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70594F0C-AE1E-4CA3-9650-255899C80DF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
