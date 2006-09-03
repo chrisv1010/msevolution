@@ -6,6 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+//build smart placemine
+//change colors
+//add flag and mine
+//faster load on button add
+
 namespace MSEvolution {
     public partial class MSEvolution : Form {
         private MineField field;
@@ -15,12 +20,12 @@ namespace MSEvolution {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            field = new MineField(this.panel1, 10, 10, 10);            
-            field.NewGame();
-            MessageBox.Show(field.Print());
+            panel1.Enabled = true;
+            field = new MineField(this.panel1, 10, 10, 2);
             field.Tick += new EventHandler(GameTick);
-            field.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
-            field.Start();
+            field.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);            
+            field.NewGame();
+            //MessageBox.Show(field.Print());
         }
 
         private void GameTick(object sender, EventArgs e) {
@@ -28,7 +33,12 @@ namespace MSEvolution {
         }
 
         private void GameDismantledMinesChanged(object sender, EventArgs e) {
-            labelBombs.Text = (field.Mines - field.DismantledMines).ToString();
+            labelBombs.Text = (field.GetMines - field.DismantledMines).ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            field.AddMine();
+            MessageBox.Show(field.Print());
         }
     }
 }
