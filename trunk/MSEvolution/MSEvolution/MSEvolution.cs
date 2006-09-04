@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -21,11 +18,10 @@ namespace MSEvolution {
 
         private void button1_Click(object sender, EventArgs e) {
             panel1.Enabled = true;
-            field = new MineField(this.panel1, 10, 10, 2);
+            field = new MineField(this.panel1, 10, 10, 2, 6, pbmineadd);
             field.Tick += new EventHandler(GameTick);
             field.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);            
-            field.NewGame();
-            //MessageBox.Show(field.Print());
+            field.NewGame();            
         }
 
         private void GameTick(object sender, EventArgs e) {
@@ -37,8 +33,15 @@ namespace MSEvolution {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            field.AddMine();
-            MessageBox.Show(field.Print());
+            field.AddMine();            
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Close();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e) {
+            field = new MineField(this.panel1, 10, 10, 2, 6, pbmineadd);
         }
     }
 }
