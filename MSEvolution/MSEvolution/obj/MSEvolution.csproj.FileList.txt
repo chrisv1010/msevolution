@@ -6,5 +6,3 @@ obj\Debug\MSEvolution.Properties.Resources.resources
 obj\Debug\MSEvolution.csproj.GenerateResource.Cache
 obj\Debug\MSEvolution.exe
 obj\Debug\MSEvolution.pdb
-bin\Debug\MSField.dll
-bin\Debug\MSField.pdb
